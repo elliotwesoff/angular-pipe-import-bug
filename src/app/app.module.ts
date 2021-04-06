@@ -3,16 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserComponent } from './components/user/user.component';
+import ItemsCountPipe from './pipes/items-count.pipe';
+
+const providers = [
+  ItemsCountPipe
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    ItemsCountPipe,
+    AppComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
+  providers,
   bootstrap: [AppComponent]
 })
 export class AppModule { }
